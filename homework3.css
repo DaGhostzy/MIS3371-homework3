@@ -1,0 +1,189 @@
+/*
+ Name: Michael Tran
+ Date created: 3/19/2025
+ Date last edited: 4/5/2025
+ Version: 1.0
+ Description: Homework 3 CSS
+*/
+
+/*
+    References: w3schools resources
+*/
+
+header
+{
+    width: 100%;
+    background-color: rgb(14, 73, 132);
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: MediumSeaGreen;
+    margin: 0;
+    height: 100%;
+    min-height: 100vh;
+}
+
+form
+{
+    flex-grow: 1;
+}
+
+h1
+{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    flex-grow: 1;
+}
+
+h2
+{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-grow: 1;
+}
+
+main
+{
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    flex-grow: 1;
+}
+
+.image
+{
+    text-align: left;
+}
+
+.td1
+{
+    text-align: right;
+    font-family: "optima", 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+th
+{
+    text-align: center;
+    font-family: sans-serif;
+}
+
+footer 
+{
+    position: flex;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: lightgray;
+    height: 2.0rem;
+}
+
+#footer
+{
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+label
+{
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+input
+{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+textarea
+{
+    text-align: left;
+    font-family: "optima", sans-serif;
+    font-weight: normal;
+}
+
+#today
+{
+    text-align: left;
+    font-family: "optima", 'Times New Roman', Times, serif;
+    font-weight: normal;
+    margin-right: 5px;
+}
+
+p
+{
+    text-align: right;
+    font-family: "optima", 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+/* error messages style */
+.error
+{
+    color: crimson;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+/* password validation message style */
+.psword-message
+{
+    color: red;
+    text-align: right;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 100%;
+    background: transparent;
+    padding: 5%;
+    border-spacing: 4%;
+    border-radius: 10%;
+}
+/* w3schools message container */
+
+/* review button style */
+#review
+{
+    margin-top: 8%;
+}
+
+/* output table style */
+table.output,
+tr.output,
+td.output
+{
+    color: black;
+    width: 80%;
+    background-color: maroon;
+    padding: 5%;
+    border-spacing: 4%;
+    border-radius: 10%;
+    margin: 0 auto;
+}
+
+/* style for individual cells */
+td.output
+{
+    width: auto;
+    background-color: chocolate;
+    padding: 5%;
+    border-spacing: 4%;
+    text-align: left;
+}
+
+#showInput
+{
+    display: flex;
+    justify-content: center;
+    width: 100%
+    margin-top: 20px;
+}
