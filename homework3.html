@@ -594,6 +594,16 @@
                                 value="Review"
                                 onclick="reviewInput()"
                             >
+                            <!-- enhance validation button -->
+                            <input
+                                tpye="button"
+                                name="validate"
+                                id="validate"
+                                value="Validate"
+                                style="font-family: 'Times New Roman', Times, serif;"
+                                onclick="validateEverything()"
+                            >
+                            
 
         <!-- password dynamic messages indicators to be displayed -->
         <div class="psword-message">
@@ -618,8 +628,6 @@
     </center>
 <!-- end of form -->
 </form>
-    
-</body>
 
 <footer>
     <a href="mhtran28@cougarnet.uh.edu">Contact us</a>
@@ -628,12 +636,15 @@
 <!-- JavaScript -->
 <script src ="homework3.js"></script>
 
-<script>
-    const d= new Date();
-    let text= d.toLocaleDateString();
-    document.getElementById("today").innerHTML= text;
-</script>
+<!-- Alert box -->
+<div id="alert-box">
+    <div id="alert-content">
+        <h4> Please fill out ALL REQURIRED fields and sections with "*" </h4>
+        <button id="close-alert"> OK </button>utton>
+    </div>
+</div>
 
+</body>
 </html>
 
 
