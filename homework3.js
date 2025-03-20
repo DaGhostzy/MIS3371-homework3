@@ -26,12 +26,28 @@ slider.oninput = function() {
 
 // First name validation
 function validateFirstName() {
-    const firstName = document.getElementById("FirstName");
-    if (!firstName.value.match(/^[a-zA-Z'-]{1,30}$/)) {
-      // pattern from w3schools/stackflow
+    firstName = document.getElementById("FirstName").value.trim();
+    var namePattern = /^[a-[a-zA-Z'-]{1,30}$/;
+    // regex pattern from w3schools/stackflow
+
+    // checks/validates of the first name field is empty/blank
+    if (firstName == "") {
         document.getElementById("FirstName-error").innerHTML = 
-        "Please enter a valid first name";
+        "Please enter a valid first name, can NOT be left empty/blank";
         return false;
+    // checks validation if first name matches pattern
+    else if (firstName != "") {
+        if (!firstName.match(namePattern)) {
+            document.getElementByID("FirstName-error").innerHTML = "Letters, apostrophes, and dashes only";
+            return false;
+    // checks validation if first name has at least 1 character
+        } else if FirstName.length < 2) {
+           document.getElementByID("FirstName-error").innerHTML = "First name can NOT have less than 2 letters";
+            return false; 
+    // checks validation if first name has more than 30 characters
+        } else if FirstName.length > 30) {
+           document.getElementByID("FirstName-error").innerHTML = "First name can NOT have more than 30 letters";
+            return false;
     } else {
         document.getElementById("FirstName-error").innerHTML = "";
         return true;
@@ -40,11 +56,17 @@ function validateFirstName() {
 
 // Middle initial validation
 function validateMiddle() {
-    const middleInitial = document.getElementById("MiddleInitial");
-    if (middleInitial.value && !middleInitial.value.match(/^[a-zA-Z]$/)) {
-      //pattern from w3schools/stackflow
-        document.getElementById("MiddleInitial-error").innerHTML = 
-        "Please enter a single letter";
+    let MiddleInitial = document.getElementById("MiddleInitial");
+    const namePattern = /^[A-Z]+$/;
+    // regex pattern from w3schools/stackflow
+ 
+    // validates the middle initial to uppercase letter
+    MiddleInitial = MiddleInitial.toUpperCase();
+    document.getElementById("MiddleInitial").value = MiddleInitial;
+
+    if (!MiddleInitial.match(namePattern)) {
+        document.getElementById("MiddleInitial-error").innerHTML =
+        "Middle initial must be a single letter and uppercase";
         return false;
     } else {
         document.getElementById("MiddleInitial-error").innerHTML = "";
@@ -53,13 +75,29 @@ function validateMiddle() {
 }
 
 // Last name validation
-function validateLastname() {
-    const lastName = document.getElementById("LastName");
-    if (!lastName.value.match(/^[a-zA-Z'-]{1,30}$/)) {
-      //pattern from w3schools/stackflow
+function validateLastName() {
+    LastName = document.getElementById("LastName").value.trim();
+    var namePattern = /^[a-[a-zA-Z'-]{1,30}$/;
+    // regex pattern from w3schools/stackflow
+
+    // checks/validates of the last name field is empty/blank
+    if (LastName == "") {
         document.getElementById("LastName-error").innerHTML = 
-        "Please enter a valid last name";
+        "Please enter a valid last name, can NOT be left empty/blank";
         return false;
+    // checks validation if last name matches pattern
+    else if (LastName != "") {
+        if (!LastName.match(namePattern)) {
+            document.getElementByID("LastName-error").innerHTML = "Letters, apostrophes, and dashes only";
+            return false;
+    // checks validation if last name has at least 1 character
+        } else if LastName.length < 2) {
+           document.getElementByID("LastName-error").innerHTML = "Last name can NOT have less than 2 letters";
+            return false; 
+    // checks validation if last name has more than 30 characters
+        } else if LasttName.length > 30) {
+           document.getElementByID("LastName-error").innerHTML = "Last name can NOT have more than 30 letters";
+            return false;
     } else {
         document.getElementById("LastName-error").innerHTML = "";
         return true;
@@ -70,15 +108,14 @@ function validateLastname() {
 function validateDob() {
     dob = document.getElementById("dob");
     let date = new Date(dob.value);
-    let maxDate = new Date();
-    maxDate.setFullYear(maxDate.getFullYear() - 120);
+    let maxDate = new Date().setFullYear(maxDate.getFullYear() - 120);
 
     if (date > new Date()) {
         document.getElementById("dob-error").innerHTML = 
         "Future dates are not allowed.";
         dob.value = "";
         return false;
-    } else if (date < maxDate) {
+    } else if (date < maxDate(maxDate)) {
         document.getElementById("dob-error").innerHTML =
         "The date can NOT be over 120 years ago";
         dob.value = "";
@@ -92,8 +129,8 @@ function validateDob() {
 // validation for social security number
 function validateSsn() {
     const ssn = document.getElementById("ssn").value;
+    // regex social security number validate pattern from GeeksforGeeks
     const ssnR = /^[0-9]{3}-?[0-9]{2}-?[0-9]{4}$/;
-      // regex social security number validate pattern from GeeksforGeeks
     if (!ssnR.test(ssn)) {
         document.getElementById("ssn-error").innerHTML =
         "Enter a valid Social Security Number";
@@ -113,6 +150,19 @@ function validateAddress1() {
         return false;
     } else {
         document.getElementById("Address1-error").innerHTML = "";
+        return true;
+    }
+}
+
+// City validation
+function validateCity() {
+    city = document.getElementById("City).value.trim();
+
+    if (!City) {
+        document.getElementById("City-error").innerHTML= "Select a cty, cannot be blank";
+        return false;
+    } else {
+        document.getElementById("City-error").innerHTML= "";
         return true;
     }
 }
@@ -203,7 +253,7 @@ function validatePhoneNumber() {
 
 // validate User ID
 function validateUsid() {
-    usid = document.getElementById("usid").value.toLowerCase();
+    const usid = document.getElementById("usid").value.toLowerCase();
     document.getElementById("usid").value = usid;
 
     if (usid.length == 0) {
@@ -318,10 +368,8 @@ function reviewInput() {
         //elements button/method from w3schools & stackoverflow
         // parts of if/else element.type code from American Express- https://online.americanexpress.com/myca/tasdsgn/us/docs/en_US_sbs/faqs/faq1.html
             continue;
-            
 
         }
-        
         // Handle different input types
         if (element.type === "checkbox") {
             if (element.checked) {
@@ -329,14 +377,12 @@ function reviewInput() {
             }
         } 
         // parts of if/else element.type code from American Express- https://online.americanexpress.com/myca/tasdsgn/us/docs/en_US_sbs/faqs/faq1.html
-
         else if (element.type === "radio") {
             if (element.checked) {
                 formoutput += `<tr><td align='right'>${element.name}</td><td>${element.value}</td></tr>`;
             }
         } 
         // parts of if/else element.type code from American Express- https://online.americanexpress.com/myca/tasdsgn/us/docs/en_US_sbs/faqs/faq1.html
-
         else if (element.value !== "") {
             // For text, email, password, etc. with values
             formoutput += `<tr><td align='right'>${element.name}</td><td>${element.value}</td></tr>`;
@@ -348,3 +394,49 @@ function reviewInput() {
     formoutput += "</table>";
     document.getElementById("showInput").innerHTML = formoutput;
 }
+
+function showAlert() {
+    var alertBox = document.getElementById("alert-box");
+    var closeAlert = document.getElementById("close-alert");
+
+    alertBox.style.display = "block";
+    clsoeAlert.onclick = function() {
+        alertBox.style.display= "none";
+    }:
+}
+
+// valitate for everything
+function validateEverything() {
+    let valid= true;
+
+    if (!validateFirstName()) valid = false;
+    if (!validateMiddle()) valid = false;
+    if (!validateLastname()) valid = false;
+    if (!validateDob()) valid = false;
+    if (!validateSsn()) valid = false;
+    if (!validateAddress1()) valid = false;
+    if (!validateCity()) valid = false;
+    if (!validateZipcode()) valid = false;
+    if (!validatePhoneNumber()) valid = false;
+    if (!validateEmail()) valid = false;
+    if (!validateUsid()) valid = false;
+    if (!validatepsword()) valid = false;
+    if (!confirmpsword()) valid = false;
+
+    if (valid) {
+        document.getElementById("submit").disabled= false;
+    }
+    else {
+        showAlert();
+    }
+}
+
+
+
+
+
+
+
+
+
+    
