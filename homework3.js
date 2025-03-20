@@ -38,19 +38,21 @@ function validateFirstName() {
     // checks validation if first name matches pattern
     else if (firstName != "") {
         if (!firstName.match(namePattern)) {
-            document.getElementByID("FirstName-error").innerHTML = "Letters, apostrophes, and dashes only";
+            document.getElementById("FirstName-error").innerHTML = "Letters, apostrophes, and dashes only";
             return false;
+        }
     // checks validation if first name has at least 1 character
-        } else if FirstName.length < 2) {
-           document.getElementByID("FirstName-error").innerHTML = "First name can NOT have less than 2 letters";
+        } else if (FirstName.length < 2) {
+           document.getElementById("FirstName-error").innerHTML = "First name can NOT have less than 2 letters";
             return false; 
     // checks validation if first name has more than 30 characters
-        } else if FirstName.length > 30) {
-           document.getElementByID("FirstName-error").innerHTML = "First name can NOT have more than 30 letters";
+        } else if (FirstName.length > 30) {
+           document.getElementById("FirstName-error").innerHTML = "First name can NOT have more than 30 letters";
             return false;
-    } else {
-        document.getElementById("FirstName-error").innerHTML = "";
-        return true;
+        } else {
+            document.getElementById("FirstName-error").innerHTML = "";
+            return true;
+        }
     }
 }
 
@@ -85,22 +87,24 @@ function validateLastName() {
         document.getElementById("LastName-error").innerHTML = 
         "Please enter a valid last name, can NOT be left empty/blank";
         return false;
+        }
     // checks validation if last name matches pattern
     else if (LastName != "") {
         if (!LastName.match(namePattern)) {
-            document.getElementByID("LastName-error").innerHTML = "Letters, apostrophes, and dashes only";
+            document.getElementById("LastName-error").innerHTML = "Letters, apostrophes, and dashes only";
             return false;
     // checks validation if last name has at least 1 character
-        } else if LastName.length < 2) {
-           document.getElementByID("LastName-error").innerHTML = "Last name can NOT have less than 2 letters";
+        } else if (LastName.length < 2) {
+           document.getElementById("LastName-error").innerHTML = "Last name can NOT have less than 2 letters";
             return false; 
     // checks validation if last name has more than 30 characters
-        } else if LasttName.length > 30) {
-           document.getElementByID("LastName-error").innerHTML = "Last name can NOT have more than 30 letters";
+        } else if (LasttName.length > 30) {
+           document.getElementById("LastName-error").innerHTML = "Last name can NOT have more than 30 letters";
             return false;
-    } else {
-        document.getElementById("LastName-error").innerHTML = "";
-        return true;
+        } else {
+            document.getElementById("LastName-error").innerHTML = "";
+            return true;
+        }
     }
 }
 
@@ -156,7 +160,7 @@ function validateAddress1() {
 
 // City validation
 function validateCity() {
-    city = document.getElementById("City).value.trim();
+    city = document.getElementById("City").value.trim();
 
     if (!City) {
         document.getElementById("City-error").innerHTML= "Select a cty, cannot be blank";
@@ -400,7 +404,7 @@ function showAlert() {
     var closeAlert = document.getElementById("close-alert");
 
     alertBox.style.display = "block";
-    clsoeAlert.onclick = function() {
+    closeAlert.onclick = function() {
         alertBox.style.display= "none";
     }:
 }
@@ -411,7 +415,7 @@ function validateEverything() {
 
     if (!validateFirstName()) valid = false;
     if (!validateMiddle()) valid = false;
-    if (!validateLastname()) valid = false;
+    if (!validateLastName()) valid = false;
     if (!validateDob()) valid = false;
     if (!validateSsn()) valid = false;
     if (!validateAddress1()) valid = false;
