@@ -84,7 +84,7 @@ footer
 #footer
 {
     text-align: right;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "optima", sans-serif;
     font-weight: normal;
     margin-right: 10px;
 }
@@ -187,3 +187,99 @@ td.output
     width: 100%
     margin-top: 20px;
 }
+
+/* style for alert box */
+#alert-box
+{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 90%
+    height: 90%
+    overflow: auto;
+    background-color: red;
+}
+
+/* content area of the alert box style */
+#alert-content
+{
+    background-color: maroon;
+    border-radius: 10%;
+    width: 50%;
+    heigh: 50%;
+    margin: auto;
+    margin-top: 25%;
+    padding: 25%;
+    text-align: center;
+}
+
+/* heading of alert box */
+#alert-conent h4
+{
+    font-size: 25%;
+    font-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: normal;
+}
+
+/* close/OK buttom in alert box */
+{
+    background-color: silver;
+    border-width: 1%;
+    border-style: solid;
+    color: black;
+    border-color: black;
+    font-size: 10%;
+    font-weight: bold;
+    height: 15%;
+    width: 15%;
+    border-radius: 10%;
+    cursor: pointer;
+    margin-top: 15%
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* password message box style */
+ .pword-message 
+{
+    text-align: right;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: normal;
+    position: relative;
+    left: 20%;
+    background: transparent;
+    padding: 5%;
+    border-spacing: 10%;
+    border-radius: 10%;
+    color: red;
+}
+
+/* output table style */
+table.output,
+tr.output,
+td.output
+{
+    color: black;
+    width: 80%;
+    background-color: maroon;
+    padding: 5%;
+    border-spacing: 4%;
+    border-radius: 10%;
+    margin: 0 auto;
+}
+
+/* style for individual cells */
+td.outputdata
+{
+    width: auto;
+    background-color: chocolate;
+    padding: 5%;
+    border-spacing: 4%;
+    text-align: left;
+}
+
+
+
