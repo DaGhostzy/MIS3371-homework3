@@ -394,7 +394,7 @@ function reviewInput() {
     }
 // parts of if/else element.type code from American Express- https://online.americanexpress.com/myca/tasdsgn/us/docs/en_US_sbs/faqs/faq1.html
 
-    
+//Alert box
     formoutput += "</table>";
     document.getElementById("showInput").innerHTML = formoutput;
 }
