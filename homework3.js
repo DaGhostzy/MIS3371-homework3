@@ -16,8 +16,8 @@ let text = d.toLocaleDateString();
 document.getElementById("today").innerHTML = text;
 
 //name slider
-let slider = document.getElementById("range");
-let output = document.getElementById("range-slider");
+let slider = document.getElementById("Range");
+let output = document.getElementById("Range-slider");
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
@@ -26,19 +26,19 @@ slider.oninput = function() {
 
 // First name validation
 function validateFirstName() {
-    firstName = document.getElementById("FirstName").value.trim();
+    FirstName = document.getElementById("FirstName").value.trim();
     var namePattern = /^[a-zA-Z'-]{1,30}$/;
     // regex pattern from w3schools/stackflow
 
     // checks/validates of the first name field is empty/blank
-    if (firstName == "") {
+    if (FirstName == "") {
         document.getElementById("FirstName-error").innerHTML = 
         "Please enter a valid first name, can NOT be left empty/blank";
         return false;
     }
     // checks validation if first name matches pattern
-    else if (firstName != "") {
-        if (!firstName.match(namePattern)) {
+    else if (FirstName != "") {
+        if (!FirstName.match(namePattern)) {
             document.getElementById("FirstName-error").innerHTML = "Letters, apostrophes, and dashes only";
             return false;
         }
@@ -161,7 +161,7 @@ function validateAddress1() {
 
 // City validation
 function validateCity() {
-    city = document.getElementById("City").value.trim();
+    City = document.getElementById("City").value.trim();
 
     if (!City) {
         document.getElementById("City-error").innerHTML= "Select a cty, cannot be blank";
