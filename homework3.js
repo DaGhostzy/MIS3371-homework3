@@ -27,7 +27,7 @@ slider.oninput = function() {
 // First name validation
 function validateFirstName() {
     firstName = document.getElementById("FirstName").value.trim();
-    var namePattern = /^[a-[a-zA-Z'-]{1,30}$/;
+    var namePattern = /^[a-zA-Z'-]{1,30}$/;
     // regex pattern from w3schools/stackflow
 
     // checks/validates of the first name field is empty/blank
@@ -80,7 +80,7 @@ function validateMiddle() {
 // Last name validation
 function validateLastName() {
     LastName = document.getElementById("LastName").value.trim();
-    var namePattern = /^[a-[a-zA-Z'-]{1,30}$/;
+    var namePattern = /^[a-zA-Z'-]{1,30}$/;
     // regex pattern from w3schools/stackflow
 
     // checks/validates of the last name field is empty/blank
@@ -99,7 +99,7 @@ function validateLastName() {
            document.getElementById("LastName-error").innerHTML = "Last name can NOT have less than 2 letters";
             return false; 
     // checks validation if last name has more than 30 characters
-        } else if (LasttName.length > 30) {
+        } else if (LastName.length > 30) {
            document.getElementById("LastName-error").innerHTML = "Last name can NOT have more than 30 letters";
             return false;
         } else {
@@ -407,7 +407,7 @@ function showAlert() {
     alertBox.style.display = "block";
     closeAlert.onclick = function() {
         alertBox.style.display= "none";
-    }:
+    }
 }
 
 // valitate for everything
