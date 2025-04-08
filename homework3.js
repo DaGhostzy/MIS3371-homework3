@@ -164,7 +164,7 @@ function validateCity() {
     City = document.getElementById("City").value.trim();
 
     if (!City) {
-        document.getElementById("City-error").innerHTML= "Select a cty, cannot be blank";
+        document.getElementById("City-error").innerHTML= "Select a city, cannot be blank";
         return false;
     } else {
         document.getElementById("City-error").innerHTML= "";
