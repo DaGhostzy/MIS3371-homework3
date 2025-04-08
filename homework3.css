@@ -225,6 +225,7 @@ td.output
 }
 
 /* close/OK buttom in alert box */
+#close-alert
 {
     background-color: silver;
     border-width: 1px;
