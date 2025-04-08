@@ -413,27 +413,56 @@ function showAlert() {
 function validateEverything() {
     let valid= true;
 
-    if (!validateFirstName()) valid = false;
-    if (!validateMiddle()) valid = false;
-    if (!validateLastName()) valid = false;
-    if (!validateDob()) valid = false;
-    if (!validateSsn()) valid = false;
-    if (!validateAddress1()) valid = false;
-    if (!validateCity()) valid = false;
-    if (!validateZipcode()) valid = false;
-    if (!validatePhoneNumber()) valid = false;
-    if (!validateEmail()) valid = false;
-    if (!validateUsid()) valid = false;
-    if (!validatepsword()) valid = false;
-    if (!confirmpsword()) valid = false;
+    if (!validateFirstName()) {
+        valid = false;
+    }
+    if (!validateMiddle()) {
+        valid = false;
+    }
+    if (!validateLastName()) {
+        valid = false;
+    }
+    if (!validateDob()) {
+        valid = false;
+    }
+    if (!validateSsn()) {
+        valid = false;
+    }
+    if (!validateAddress1()) {
+        valid = false;
+    }
+    if (!validateCity()) {
+        valid = false;
+    }
+    if (!validateZipcode()) {
+        valid = false;
+    }
+    if (!validatePhoneNumber()) {
+        valid = false;
+    }
+    if (!validateEmail()) {
+        valid = false;
+    }
+    if (!validateUsid()) {
+        valid = false;
+    }
+    if (!validatepsword()) {
+        valid = false;
+    }
+    if (!confirmpsword()) {
+        valid = false;
+    }
 
     if (valid) {
-        document.getElementById("submit").disabled= false;
+        document.getElementById("submit").disabled = false;
+        return true;
     }
     else {
         showAlert();
+        return false;
     }
 }
+
 
 
 
