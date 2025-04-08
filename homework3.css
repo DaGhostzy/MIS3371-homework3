@@ -12,7 +12,7 @@
 
 header
 {
-    width: 100px;
+    width: 100%;
     background-color: rgb(14, 73, 132);
 }
 
@@ -23,7 +23,7 @@ body
     align-items: center;
     background: MediumSeaGreen;
     margin: 0;
-    height: 100px;
+    height: 100%;
     min-height: 100vh;
 }
 
@@ -76,7 +76,7 @@ footer
 {
     position: flex;
     margin-bottom: 0;
-    width: 100px;
+    width: 100%;
     background-color: lightgray;
     height: 2.0rem;
 }
@@ -86,7 +86,7 @@ footer
     text-align: right;
     font-family: "optima", sans-serif;
     font-weight: normal;
-    margin-right: 10px;
+    margin-right: 10%;
 }
 
 label
@@ -115,7 +115,7 @@ textarea
     text-align: left;
     font-family: "optima", 'Times New Roman', Times, serif;
     font-weight: normal;
-    margin-right: 5px;
+    margin-right: 5%;
 }
 
 p
@@ -129,7 +129,7 @@ p
 .error
 {
     color: crimson;
-    font-size: 20px;
+    font-size: 20%;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
@@ -142,18 +142,18 @@ p
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif;
     position: relative;
-    left: 100px;
+    left: 100%;
     background: transparent;
-    padding: 10px;
-    border-spacing: 4px;
-    border-radius: 10px;
+    padding: 10%;
+    border-spacing: 4%;
+    border-radius: 10%;
 }
 /* w3schools message container */
 
 /* review button style */
 #review
 {
-    margin-top: 8px;
+    margin-top: 8%;
 }
 
 /* output table style */
@@ -162,11 +162,11 @@ tr.output,
 td.output
 {
     color: black;
-    width: 80px;
+    width: 80%;
     background-color: maroon;
-    padding: 10px;
-    border-spacing: 4px;
-    border-radius: 10px;
+    padding: 10%;
+    border-spacing: 4%;
+    border-radius: 10%;
     margin: 0 auto;
 }
 
@@ -175,8 +175,8 @@ td.output
 {
     width: auto;
     background-color: chocolate;
-    padding: 10px;
-    border-spacing: 4px;
+    padding: 10%;
+    border-spacing: 4%;
     text-align: left;
 }
 
@@ -184,8 +184,8 @@ td.output
 {
     display: flex;
     justify-content: center;
-    width: 100px;
-    margin-top: 20px;
+    width: 100%;
+    margin-top: 20%;
 }
 
 /* style for alert box */
@@ -208,7 +208,7 @@ td.output
     background-color: maroon;
     border-radius: 10px;
     width: 50px;
-    heigh: 50px;
+    height: 50px;
     margin: auto;
     margin-top: 100px;
     padding: 100px;
@@ -219,7 +219,7 @@ td.output
 #alert-conent h4
 {
     font-size: 100px;
-    font-align: center;
+    text-align: center;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
 }
