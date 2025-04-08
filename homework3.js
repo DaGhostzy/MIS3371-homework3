@@ -35,6 +35,7 @@ function validateFirstName() {
         document.getElementById("FirstName-error").innerHTML = 
         "Please enter a valid first name, can NOT be left empty/blank";
         return false;
+    }
     // checks validation if first name matches pattern
     else if (firstName != "") {
         if (!firstName.match(namePattern)) {
