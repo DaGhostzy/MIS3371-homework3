@@ -16,13 +16,13 @@ let text = d.toLocaleDateString();
 document.getElementById("today").innerHTML = text;
 
 //name slider
-let slider = document.getElementById("Range");
-let output = document.getElementById("Range-slider");
+let slider = document.getElementById("range");
+let output = document.getElementById("range-slider");
 output.innerHTML = slider.value;
 
-slider.oninput = function() {
+slider.oninput = function () {
     output.innerHTML = this.value;
-}
+};
 
 // First name validation
 function validateFirstName() {
