@@ -54,7 +54,6 @@ function validateFirstName() {
             document.getElementById("FirstName-error").innerHTML = "";
             return true;
         }
-    }
 }
 
 // Middle initial validation
