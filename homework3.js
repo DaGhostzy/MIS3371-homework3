@@ -35,13 +35,13 @@ function validateFirstName() {
         document.getElementById("FirstName-error").innerHTML = 
         "Please enter a valid first name, can NOT be left empty/blank";
         return false;
-    }
+        }
     // checks validation if first name matches pattern
     else if (FirstName != "") {
         if (!FirstName.match(namePattern)) {
             document.getElementById("FirstName-error").innerHTML = "Letters, apostrophes, and dashes only";
             return false;
-        }
+        
     // checks validation if first name has at least 1 character
         } else if (FirstName.length < 2) {
            document.getElementById("FirstName-error").innerHTML = "First name can NOT have less than 2 letters";
@@ -54,6 +54,7 @@ function validateFirstName() {
             document.getElementById("FirstName-error").innerHTML = "";
             return true;
         }
+    }
 }
 
 // Middle initial validation
