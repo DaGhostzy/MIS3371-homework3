@@ -115,7 +115,7 @@ textarea
     text-align: left;
     font-family: "optima", 'Times New Roman', Times, serif;
     font-weight: normal;
-    margin-right: 5%;
+    margin-right: 5px;
 }
 
 p
@@ -129,7 +129,7 @@ p
 .error
 {
     color: crimson;
-    font-size: 20%;
+    font-size: 20px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: bold;
 }
@@ -164,7 +164,7 @@ td.output
     color: black;
     width: 80%;
     background-color: maroon;
-    padding: 10%;
+    padding: 5%;
     border-spacing: 4%;
     border-radius: 10%;
     margin: 0 auto;
@@ -175,7 +175,7 @@ td.output
 {
     width: auto;
     background-color: chocolate;
-    padding: 10%;
+    padding: 5%;
     border-spacing: 4%;
     text-align: left;
 }
@@ -185,7 +185,7 @@ td.output
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-top: 20%;
+    margin-top: 20px;
 }
 
 /* style for alert box */
@@ -281,6 +281,3 @@ td.outputdata
     border-spacing: 4px;
     text-align: left;
 }
-
-
-
