@@ -16,13 +16,13 @@ let text = d.toLocaleDateString();
 document.getElementById("today").innerHTML = text;
 
 //name slider
-let slider = document.getElementById("range");
-let output = document.getElementById("range-slider");
+let slider = document.getElementById("Range");
+let output = document.getElementById("Range-slider");
 output.innerHTML = slider.value;
 
-slider.oninput = function () {
+slider.oninput = function() {
     output.innerHTML = this.value;
-};
+}
 
 // First name validation
 function validateFirstName() {
@@ -300,26 +300,31 @@ function validatepsword() {
     const errorMessages = [];
     let isValid = true;
     
+    // checks if password has atleast 1 lowercase letter
     if (!psword.match(/[a-z]/)) {
         errorMessages.push("Include at least one lowercase letter");
         isValid = false;
     }
 
+    // checks if password has atleast 1 uppercase letter
     if (!psword.match(/[A-Z]/)) {
         errorMessages.push("Include at least one uppercase letter");
         isValid = false;
     }
 
+    // checks if password has atleast 1 number
     if (!psword.match(/[0-9]/)) {
         errorMessages.push("Include at least one number");
         isValid = false;
     }
 
+    // checks if password has atleast 1 special character
     if (!psword.match(/[!@#$%&*\-_\.+\(\)]/)) {
         errorMessages.push("Include at least one special character");
         isValid = false;
     }
 
+    // checks if password is the same as user id, cannot be the same
     if (usid && psword.includes(usid)) {
         errorMessages.push("User ID cannot be part of the password");
         isValid = false;
@@ -463,14 +468,5 @@ function validateEverything() {
         return false;
     }
 }
-
-
-
-
-
-
-
-
-
 
     
